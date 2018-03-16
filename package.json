@@ -1,0 +1,35 @@
+{
+  "name": "zigbee",
+  "version": "1.0.0",
+  "description": "A demonstration program module for zigbee using Beaglebone black.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laitinenp/zigbee.git"
+  },
+  "keywords": [
+    "arduino",
+    "beaglebone",
+    "IoT",
+    "ZigBee"
+  ],
+  "author": "Usva Software Co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laitinenp/zigbee/issues"
+  },
+  "homepage": "https://github.com/laitinenp/zigbee#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bonescript": "^0.5.0",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "node-rest-client": "^2.0.1",
+    "util": "^0.10.3",
+    "xbee-api": "^0.4.3"
+  }
+}

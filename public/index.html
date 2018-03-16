@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html>
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Simple Home Automation</title>
+
+	<!-- SPELLS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-sanitize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/ng-radial-gauge-dir.js"></script>
+    
+	<script src="js/controllers/main.js"></script>     <!-- load up our controller -->
+	<script src="js/services/sensors.js"></script>     <!-- load our sensors service stub for REST API -->
+	<script src="js/services/relays.js"></script>      <!-- load our relays service stub for REST API -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#sensors-list 			{ margin-bottom:30px; }
+		#relays-list 			{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+</head>
+
+
+<body ng-app="UsvaHomeApp">
+	
+	<div class="container">
+
+		<!-- HEADER AND TODO COUNT -->
+		<div class="page-header">
+			<h1><img src="./images/home.gif"  width="100" height="100"></img>Home App</span></h1>
+		</div>
+
+		<!-- SENSORS LIST -->
+		<div id="sensors-list" class="panel panel-default" ng-controller="sensorsController">
+			<div class="panel-heading">Activated Sensors</div>
+			
+			<div class="panel-body">
+				<!-- LOOP OVER THE SENSORS IN $scope.sensors -->
+				<div ng-repeat="sensor in sensors">
+					<div>{{ sensor.name }}</div>
+					<div width="50%" ng-radial-gauge ranges="sensor.ranges" value="sensor.value" value-unit="sensor.unit" precision="sensor.precision" lower-limit="sensor.lowerLimit" upper-limit="sensor.upperLimit"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- RELAYS LIST -->
+		<div id="relays-list" class="panel panel-default" ng-controller="relaysController">
+			<div class="panel-heading">Lighting Relays</div>
+			
+			<div class="panel-body">
+			    <div class="container-fluid">
+    				<!-- LOOP OVER THE RELAYS IN $scope.relays -->
+    				<div class="checkbox" ng-repeat="relay in relays">
+    					<label>
+                            <input type="checkbox" ng-model="relay.value" ng-change="put(relay.name, relay.value)">
+    						{{ relay.name }}
+    					</label>
+    				</div>
+    			</div>
+			</div>
+		</div>
+
+		<div class="text-center text-muted">
+			<p>A demo by <a href="https://ide.c9.io/laitinenp">Usva Software Co</a>.</p>
+			<p>View the code at <a href="https://github.com/laitinenp/zigbee">github.com</a>.</p>
+		</div>
+	</div>
+</body>
+</html>

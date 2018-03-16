@@ -1,0 +1,26 @@
+{
+  "name": "zigbee",
+  "description": "A demonstration program module for zigbee using Beaglebone black.",
+  "main": "server.js",
+  "authors": [
+    "Usva Software Co"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "beaglebone",
+    "IoT",
+    "ZigBee"
+  ],
+  "homepage": "https://github.com/laitinenp/zigbee",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-dialgauge": "^0.1.5"
+  }
+}

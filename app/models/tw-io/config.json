@@ -1,0 +1,35 @@
+{
+
+	"url" : "https://aca-karelia01.elisaiot.com/Thingworx/Things/",
+	
+	"auth" : {
+		"user":"LTTNS12",
+		"password":"changednow"
+	},
+
+	"putargs" : {
+		"headers" : {
+			"Content-Type":"application/json"
+		},
+		"requestConfig" : {
+			"timeout":"1000",
+			"keepAlive":"false"
+		}
+	},
+
+	"postargs" : {
+		"headers" : {
+			"Accept" : "text/csv",
+			"Content-Type" : "application/json"
+		},
+		"data":{
+			"maxItems":"500",
+			"oldestFirst":"false"
+		},
+		"requestConfig":{
+			"timeout":"1000",
+			"keepAlive":"false"
+		}
+	}	
+}
+
