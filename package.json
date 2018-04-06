@@ -1,35 +1,41 @@
 {
-  "name": "zigbee",
+  "name": "Lighthouse Server",
   "version": "1.0.0",
-  "description": "A demonstration program module for zigbee using Beaglebone black.",
+  "description": "A demonstration program module for Elli Lighthouse.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laitinenp/zigbee.git"
+    "url": "git+https://github.com/laitinenp/lighthouse.git"
   },
   "keywords": [
     "arduino",
-    "beaglebone",
+    "raspberrypi",
     "IoT",
     "ZigBee"
   ],
   "author": "Usva Software Co",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laitinenp/zigbee/issues"
+    "url": "https://github.com/laitinenp/lighthouse/issues"
   },
-  "homepage": "https://github.com/laitinenp/zigbee#readme",
+  "homepage": "https://github.com/laitinenp/lighthouse#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "bonescript": "^0.5.0",
-    "express": "^4.14.0",
-    "method-override": "^2.3.6",
-    "morgan": "^1.7.0",
-    "node-rest-client": "^2.0.1",
-    "util": "^0.10.3",
-    "xbee-api": "^0.4.3"
+    "angular-chart.js": "^1.1.1",
+    "basic-auth-connect": "^1.0.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "isodate": "^0.1.4",
+    "json2csv": "^4.0.2",
+    "method-override": "^2.3.10",
+    "mongodb": "^3.0.5",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "node-rest-client": "^3.1.0",
+    "npm": "^5.7.1",
+    "url": "^0.11.0",
+    "util": "^0.10.3"
   }
 }
