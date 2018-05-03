@@ -1,10 +1,10 @@
 module.exports = {
     
     relays : [
-        require('./relays/led.js'),
-        require('./relays/gardenlight.js'),
-        require('./relays/relay1.js'),
-        require('./relays/relay4.js')
+        //require('./relays/led.js'),
+        //require('./relays/gardenlight.js'),
+        //require('./relays/relay1.js'),
+        //require('./relays/relay4.js')
 
     ],
 
